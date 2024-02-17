@@ -22,7 +22,9 @@ displayed is of a random meme.
 9. **Terminal**: powershell
 
 ## Getting Started
-
+Currently the only dynamic part of the app is that the image 
+displayed on the web page is randomized with the click of the
+ button. Nothing else really can be interacted with. 
 
 ## Installation
 1. Make a directory to clone this repository into\

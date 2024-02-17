@@ -23,7 +23,7 @@ displayed is of a random meme.
 
 ## Getting Started
 Currently the only dynamic part of the app is that the image 
-displayed on the web page is randomized with the click of the
+ displayed on the web page is randomized with the click of the
  button. Nothing else really can be interacted with. 
 
 ## Installation

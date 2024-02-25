@@ -23,23 +23,38 @@ export default function Meme(){
         });
     }
 
+    function handleChange(event){
+        const {name, value} = event.target;
+
+        setMeme(prevMeme => ({
+            ...prevMeme,
+            [name]: value
+        }))
+    }
+
     return(
         <main>
             <div className="form">
                 <div>
-                    <label className="form--label">Top text</label>
+                    <label htmlFor="topText" className="form--label">Top text</label>
                     <input 
                         type="text"
-                        placeholder="Shut up"
                         className="form--input"
+                        name="topText"
+                        placeholder="One does not simply"
+                        onChange={handleChange}
+                        value={meme.topText}
                     />
                 </div>
                 <div>
                     <label className="form--label">Bottom text</label>
                     <input 
                         type="text"
-                        placeholder="And take my money"
                         className="form--input"
+                        name="bottomText"
+                        placeholder="Stroll into mordor"
+                        onChange={handleChange}
+                        value={meme.bottomText}
                     />
                 </div>
                 <button
@@ -50,10 +65,14 @@ export default function Meme(){
                 </button>
             </div>
             
-            <img 
-                className="meme--image" 
-                src={meme.randomImage}
-            />
+            <div className="meme">
+                <img 
+                    className="meme--image" 
+                    src={meme.randomImage}
+                />
+                <h2 className="meme--text top">{meme.topText}</h2>
+                <h2 className="meme--text bottom">{meme.bottomText}</h2>
+            </div>
             
         </main>
     );

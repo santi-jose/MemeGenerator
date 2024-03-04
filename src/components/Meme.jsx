@@ -1,4 +1,6 @@
 import React from "react"
+import { useQuery } from "@tanstack/react-query"
+
 
 export default function Meme(){
 
@@ -10,15 +12,26 @@ export default function Meme(){
 
     const [allMemes, setAllMemes] = React.useState([])
 
+    // make API request using useQuery
+    async function fetchMemes(){
+        const res = await fetch("https://api.imgflip.com/get_memes");
+        const data = await res.json();
+        return data.data.memes; // return meme array
+    }
+
+    const { isLoading, error, data } = useQuery(
+        {
+            queryKey: ['memeData'],
+            queryFn: fetchMemes,
+        }
+    );
+
     React.useEffect(
-        function(){
-            async function getMemes(){
-                const res = await fetch("https://api.imgflip.com/get_memes");
-                const data = await res.json();
-                setAllMemes(data.data.memes);
-            }
-            getMemes();
-        }, []);
+        function (){
+            if(isLoading) console.log('isLoading');
+            if(error) console.error('error: ' + error);
+            if(data) setAllMemes(data);
+        }, [error, data]);
 
     function getMemeImage() {
         const randomNumber = Math.floor(Math.random() * allMemes.length);

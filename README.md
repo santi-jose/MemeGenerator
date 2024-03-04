@@ -8,9 +8,9 @@ The Header component is used to render the header on the webpage.
 The Meme component consists of two text inputs, a button input, 
 and an image. 
 
-The two text input values and image src are managed by a React state composed of an object. Each input has its own property defined in the meme object: "topText" for the top text input, "bottomText" for the bottom text input, and "randomImage" for the image. 
+The two text input values and image src property are managed by a React state composed of an object. Each input has its own property defined in the meme object: "topText" for the top text input, "bottomText" for the bottom text input, and "randomImage" for the image. 
 
-The button labeled "Get a new meme image" triggers the getMemeImage() function that sets our meme's randomImage state to a new meme image from our memes data array. 
+The button labeled "Get a new meme image" triggers the getMemeImage() function that sets our meme's randomImage state to a new meme image from our allMemes array. The allMemes array is retrieved from the imgflip API via the useEffect hook. 
 
 The two text inputs have the onChange event listener that trigger whenever the text input changes. When the text input changes, the handleChange() function is triggered and updates our "topText" and "bottomText" values accordingly.
 
@@ -27,7 +27,7 @@ The two text inputs have the onChange event listener that trigger whenever the t
 
 ## Getting Started
 The dynamic elements of the app include:
-1.  the image displayed on the web page is randomized with the click of the button. 
+1.  The image displayed on the web page is randomized with the click of the button. 
 2. The text inputs labeled "Top Text" and "Bottom Text" are used to display text on the meme image and create your own meme. 
 
 ## Installation

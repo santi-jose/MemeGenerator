@@ -10,7 +10,7 @@ and an image.
 
 The two text input values and image src property are managed by a React state composed of an object. Each input has its own property defined in the meme object: "topText" for the top text input, "bottomText" for the bottom text input, and "randomImage" for the image. 
 
-The button labeled "Get a new meme image" triggers the getMemeImage() function that sets our meme's randomImage state to a new meme image from our allMemes array. The allMemes array is retrieved from the imgflip API via the useEffect hook. 
+The button labeled "Get a new meme image" triggers the getMemeImage() function that sets our meme's randomImage state to a new meme image from our allMemes array. The allMemes array is retrieved from the imgflip API via the useEffect hook. Also used the useQuery hook to request data from API 
 
 The two text inputs have the onChange event listener that trigger whenever the text input changes. When the text input changes, the handleChange() function is triggered and updates our "topText" and "bottomText" values accordingly.
 

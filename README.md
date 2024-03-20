@@ -18,12 +18,12 @@ The two text inputs have the onChange event listener that trigger whenever the t
 
 1. **IDE**: VSCode
 2. **Markup Languages**: Markdown
-4. **Programming Languages**: JSX
-5. **Style Sheet Languages**: CSS 
-6. **UI Framework**: React
-7. **Local Development Server**: Vite
-8. **Version Control System**: Github
-9. **Terminal**: powershell
+3. **Programming Languages**: JSX
+4. **Style Sheet Languages**: CSS 
+5. **UI Framework**: React
+6. **Local Development Server**: Vite
+7. **Version Control System**: Github
+8. **Terminal**: powershell
 
 ## Getting Started
 The dynamic elements of the app include:
